@@ -1,0 +1,121 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: radial-gradient(#ddd,#333);
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+.container .add {
+    width: 50%;
+    height: 50px;
+    margin: 150px auto 0px auto;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.add input,
+.add button {
+    height: 100%;
+    background:none;
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
+.add input {
+    width: 84%;
+    padding: 0px 15px;
+    transition: .2s all;
+}
+.add input:hover {
+    border: 1px solid goldenrod;
+}
+.add button {
+    width: 15%;
+    background-color: #ddd;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.erroes {
+    width: 50%;
+    margin: 5px auto 10px auto;
+    color: #fff;
+    padding-left: 10px;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+#toDoList {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    overflow: hidden;
+    list-style: none;
+    padding: 0px 10px;
+}
+#toDoList li {
+    text-transform: capitalize;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 5px 10px ;
+    border-radius: 5px;
+    cursor: auto;
+}
+#toDoList li.active {
+    color: red;
+}
+#toDoList li span::after {
+   content: "\002b";
+   font-weight: bold;
+   font-size: 20px;
+   cursor: pointer;
+   display: inline-block;
+   transform: rotate(45deg);
+}
+
+
+footer {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(#ddd,#333);
+    background-repeat: no-repeat;
+}
+footer p {
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+@media screen and (max-width:700px){
+    .container .add,
+    .erroes,
+    #toDoList{
+        width: 90%;
+    }
+
+    footer {
+        height: 50px;
+        padding: 10px;
+    }
+    footer p {
+        font-size: 15px;
+    }
+}
